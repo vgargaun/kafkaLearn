@@ -16,6 +16,6 @@ public class OrderProducer {
 
     public void sendOrder(OrderRequest orderProducer) {
         CompletableFuture<SendResult<String, OrderRequest>> send = kafkaTemplate.send("orders.created", orderProducer);
-        
+
     }
 }
